@@ -1,50 +1,50 @@
-# UptimeX Code
+# UptimeX CLI
 
-AI coding agent for DevOps/SRE.
+Open source CLI for UptimeX Code - AI coding agent for DevOps/SRE.
 
-## Structure
+## Installation
 
+```bash
+# Using Go
+go install github.com/uptimex/cli@latest
+
+# Or download binary from releases
+curl -fsSL https://code.uptimex.cloud/install.sh | sh
 ```
-uptimex-code/
-├── cli/           # Go CLI - terminal interface
-├── backend/       # Go API server - auth, billing, LLM proxy
-├── web/           # React - auth UI, billing, profile
-├── pkg/           # Shared Go packages
-└── api/           # OpenAPI specs
+
+## Usage
+
+```bash
+# Login
+uptimex-code auth login
+
+# Start interactive chat
+uptimex-code chat
+
+# Run a single prompt
+uptimex-code run "write a terraform module for AWS VPC"
+
+# Show config
+uptimex-code config show
 ```
+
+## Commands
+
+| Command | Description |
+|---------|-------------|
+| `auth login` | Authenticate via browser |
+| `auth logout` | Clear credentials |
+| `chat` | Interactive TUI session |
+| `run <prompt>` | Single prompt execution |
+| `config show` | Show configuration |
 
 ## Development
 
-### Prerequisites
-
-- Go 1.23+
-- Node.js 20+ (for web UI)
-- pnpm (for web UI)
-
-### CLI
-
 ```bash
-cd cli
 go build -o uptimex-code ./cmd/uptimex-code
 ./uptimex-code --help
 ```
 
-### Backend
+## License
 
-```bash
-cd backend
-go run ./cmd/server
-```
-
-### Web UI
-
-```bash
-cd web
-pnpm install
-pnpm dev
-```
-
-## URLs
-
-- Web: https://code.uptimex.cloud
-- API: https://api2.uptimex.cloud
+MIT
