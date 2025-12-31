@@ -73,6 +73,57 @@ uptimex-code/
 | Production | https://code.uptimex.cloud | https://api2.uptimex.cloud |
 | Local | http://localhost:5173 | http://localhost:8080 |
 
+## Git Workflow
+
+### Branch Protection
+
+- **`main` branch is protected** - Direct pushes are not allowed
+- All changes must go through Pull Requests
+- PRs require at least 1 approval before merging
+
+### Making Changes
+
+1. Create a feature branch from `main`:
+   ```bash
+   git checkout main
+   git pull origin main
+   git checkout -b feat/your-feature-name
+   ```
+
+2. Make your changes and commit:
+   ```bash
+   git add .
+   git commit -m "feat: description of changes"
+   ```
+
+3. Push and create a Pull Request:
+   ```bash
+   git push -u origin feat/your-feature-name
+   gh pr create --base main --title "feat: your feature" --body "Description"
+   ```
+
+4. After PR approval, merge via GitHub UI or:
+   ```bash
+   gh pr merge --squash
+   ```
+
+### Commit Convention
+
+Use conventional commits:
+- `feat:` - New feature
+- `fix:` - Bug fix
+- `docs:` - Documentation
+- `refactor:` - Code refactoring
+- `test:` - Tests
+- `chore:` - Maintenance
+
+### Branch Naming
+
+- `feat/` - New features
+- `fix/` - Bug fixes
+- `docs/` - Documentation updates
+- `refactor/` - Code refactoring
+
 ## Development
 
 ### Prerequisites
