@@ -9,11 +9,6 @@ bin/
 *.out
 vendor/
 
-# Web (Next.js)
-web/node_modules/
-web/.next/
-web/out/
-
 # Environment
 .env
 .env.local
@@ -35,3 +30,6 @@ Thumbs.db
 # Build
 dist/
 build/
+
+# Claude
+CLAUDE.md
