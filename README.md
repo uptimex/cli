@@ -9,7 +9,7 @@ Open source CLI for UptimeX Code - AI coding agent for DevOps/SRE.
 go install github.com/uptimex/cli@latest
 
 # Or download binary from releases
-curl -fsSL https://code.uptimex.cloud/install.sh | sh
+curl -fsSL https://code.uptimex.ai/install.sh | sh
 ```
 
 ## Usage
