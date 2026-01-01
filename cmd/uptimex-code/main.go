@@ -78,7 +78,7 @@ infrastructure code, automation scripts, and configuration files.`,
 		Short: "Show current configuration",
 		Run: func(cmd *cobra.Command, args []string) {
 			fmt.Println("Configuration:")
-			fmt.Println("  API URL: https://api2.uptimex.cloud")
+			fmt.Println("  API URL: https://api.uptimex.ai")
 			// TODO: Show actual config
 		},
 	}
